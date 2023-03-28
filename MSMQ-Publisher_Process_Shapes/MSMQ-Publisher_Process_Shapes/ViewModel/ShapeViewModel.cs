@@ -1,12 +1,7 @@
 ﻿using MSMQ.Messaging;
 using MSMQ_Publisher_Process_Shapes.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Shapes;
 
 namespace MSMQ_Publisher_Process_Shapes.ViewModel
@@ -19,7 +14,7 @@ namespace MSMQ_Publisher_Process_Shapes.ViewModel
         {
         }
 
-        public void Publish (Shape shape, double x, double y)
+        public void Publish(Shape shape, double x, double y)
         {
             SendDataToQueue();
             MessageQueue queue = new(privateQueuePath);
